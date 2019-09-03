@@ -146,6 +146,15 @@
     #main-footer {
         clear: both;
     }
+    #main-footer .footer-container .footer-link li {
+        display: none;
+    }
+    #main-footer .footer-container .info {
+        padding-top: 10px;
+    }
+    #main-footer .footer-container .info p {
+        padding-bottom: 10px;
+    }
     .footer-indi .top-btn {
         bottom: 280px;
         right: 10px;

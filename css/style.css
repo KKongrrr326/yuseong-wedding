@@ -114,16 +114,16 @@ header #main-menu .depth1 > li:hover .depth2 li a {
 }
 .slide-down {
     position: absolute;
-    bottom: 10%; left: 45%;
+    bottom: 5%; left: 50%;
     animation-name: slide-move;
     animation-duration: 2s;
     /* interation : 숫자 | infinite(무한) */
     animation-iteration-count: infinite;
-    /* transform: translateX(-50%); */
+    transform: translateX(-50%);
 }
 @keyframes slide-move {
     50% {
-        transform: translateY(35px);
+        margin-bottom: 50px;
     }
 }
 #main-header .menu {
