@@ -1,0 +1,433 @@
+/* style.css */
+/*
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Abril Fatface', cursive;
+*/
+
+/* 초기화 setting */
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #efefef;
+}
+html,
+body {
+    /* width: 100%; */
+    height: 100%;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0, 0, 0, 0.3);*/
+    background-image: url('../images/main1.jpg');
+    /* background:red; */
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+header .inner {
+    height: 100px;
+    background: rgba(0, 0, 0, 0.6);
+    /* border: 1px solid red; */
+    position: relative;
+}
+header .container {
+    max-width: 1200px;
+    /* min-width: 768px; */
+    height: 100%;
+}
+header .logo {
+    width: 200px;
+    display: block;
+    padding-top: 15px;
+}
+header img {
+    width: 100%;
+}
+header #main-menu {
+    width: 66.66%;
+    position: absolute;
+    top: 40px; right: 0;
+    /* border: 1px solid red; */
+}
+
+header #main-menu .depth1 > li {
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* border: 1px solid #ccc; */
+}
+
+header #main-menu .depth1 > li:hover a {
+    color: #ffcc66;
+}
+header #main-menu .depth2 li {
+    /* border: 1px solid red; */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+header #main-menu .depth2 li:first-child {
+    margin-top: 21px;
+}
+header #main-menu .depth2 li:hover {
+    background: rgba(255, 204, 102, 0.6)
+}
+header #main-menu .depth2 li a {
+    color: #efefef;
+}
+
+header #main-menu .depth1 > li:hover .depth2 li {
+    display: block;
+}
+header #main-menu .depth1 > li:hover .depth2 li a {
+    color: #efefef;
+}
+
+/* indicator */
+.indicator .next {
+    position: absolute;
+    right: 5%; bottom: 50%;
+    
+}
+.indicator .back {
+    position: absolute;
+    left: 3%; bottom: 50%;
+}
+.slide-down {
+    position: absolute;
+    bottom: 10%; left: 45%;
+    animation-name: slide-move;
+    animation-duration: 2s;
+    /* interation : 숫자 | infinite(무한) */
+    animation-iteration-count: infinite;
+    /* transform: translateX(-50%); */
+}
+@keyframes slide-move {
+    50% {
+        transform: translateY(35px);
+    }
+}
+#main-header .menu {
+    display: none;
+}
+
+
+/* about */
+#about {
+    max-width: 1200px;
+    /* min-width: 768px; */
+    margin: 0 auto;
+    position: relative;
+}
+#about img {
+    /* 가변 이미지를 적용하기 위해서 width 값 100%로 설정해야 함 */
+    width: 100%;
+    margin-top: 100px;
+} 
+#about .about-txt {
+    position: absolute;
+    top: 35%; left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+} 
+#about .about-txt h2 {
+    font-size: 48px;
+    margin-bottom: 1em;
+    color: #efefef;
+    font-family: 'Abril Fatface', cursive;
+    font-style: italic;
+}
+#about .about-txt p {
+    font-size: 18px;
+    padding-bottom: 2em;
+    line-height: 38px;
+    color: #efefef;
+    /* font-weight: bold; */
+}
+#about .about-txt .wed-btn {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: none;
+    padding: 15px 30px;
+    font-size: 15px;
+    color: #efefef;
+    outline: none;
+
+}
+#about .about-txt .wed-btn:hover {
+    border: none;
+    background: rgba(214, 176, 97, 0.6);
+}
+
+
+/* contents */
+#contents {
+    max-width: 1200px;
+    /* min-width: 768px; */
+    margin: 0 auto;
+    margin-top: 100px;
+    /* overflow: hidden; */
+    margin-bottom: 100px;
+    display: flex;
+
+}
+#contents .wedding,
+#contents .gallery,
+#contents .reservation {
+    /* width: 31.66%; */
+    height: 500px;
+    /* border: 1px solid #000; */
+    margin-right: 30px;
+    flex: 1;
+}
+#contents .reservation {
+    margin-right: 0;
+}
+
+#contents .wedding {
+    background-image: url('../images/col1.jpg');
+    position: relative;
+    background-position: center;
+}
+#contents .gallery {
+    background-image: url('../images/col2.jpg');
+    position: relative;
+    background-position: center;
+}
+#contents .reservation {
+    background-image: url('../images/col3.jpg');
+    position: relative;
+    background-position: center;
+}
+#contents .wedding .contents-txt,
+#contents .gallery .contents-txt,
+#contents .reservation .contents-txt {
+    /* font-family: 'Abril Fatface', cursive; */
+    position: absolute;
+    top: 35%; left: 50%;
+    transform: translateX(-50%);
+    /* color: #efefef;
+    font-size: 32px; */
+    text-align: center;
+    /* text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6); */
+}
+#contents .contents-txt {
+    width: 80%;
+}
+#contents .contents-txt h3 {
+    font-family: 'Abril Fatface', cursive;
+    color: #efefef;
+    font-size: 32px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+    transition: 0.4s;
+}
+#contents .contents-txt p {
+    color: #333;
+    font-size: 14px;
+    margin-top: 2em;
+    margin-bottom: 15px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    /* padding-bottom: 20px; */
+}
+#contents .wedding .contents-txt .con-btn,
+#contents .gallery .contents-txt .con-btn,
+#contents .reservation .contents-txt .con-btn {
+    margin-top: 30px;
+    padding: 10px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: none;
+    color: #efefef;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.4s;
+    outline: none;
+}
+
+#contents .wedding:hover .layout,
+#contents .gallery:hover .layout,
+#contents .reservation:hover .layout {
+    width: 100%;
+    height: 500px;
+    background-color:rgba(214, 176, 97, 0.6);
+}
+
+
+#contents .wedding:hover h3,
+#contents .gallery:hover h3,
+#contents .reservation:hover h3 {
+    color: #7c4a23;
+    text-shadow: none;
+}
+
+
+
+#contents .wedding:hover .con-btn,
+#contents .gallery:hover .con-btn,
+#contents .reservation:hover .con-btn {
+    border: none;
+    background: rgba(124, 74, 35, 0.8);
+}
+#contents .wedding:hover p,
+#contents .gallery:hover p,
+#contents .reservation:hover p {
+    opacity: 1;
+    height: 70px;
+    color: #fff;
+}
+
+/* article */
+
+#article .article-container {
+    max-width: 1200px;
+    height: 300px;
+    /* min-width: 768px; */
+    margin: 0 auto;
+    /* overflow: hidden; */
+    margin-bottom: 100px;
+    display: flex;
+}
+#article .article-container .event {
+    flex: 2;
+    margin-right: 30px;
+    text-align: center;
+    background: #d7cda7;
+}
+#article .article-container .event h3,
+#article .article-container .sns h3 {
+    font-size: 1.8em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#article .article-container .event li a {
+    color: #333;
+    float: left;
+    width: 60%;
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ccc;
+}
+#article .article-container .event .date a{
+    float: left;
+    text-align: right;
+    width: 40%;
+    padding-right: 20px;
+}
+#article .article-container .sns {
+    flex: 1;
+    text-align: center;
+    background: #d7cda7;
+}
+#article .sns-txt .sns-icon {
+    overflow: hidden;
+    font-size: 26px;
+    color: #fff;
+    margin-top: 35px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* 박스 모양과 동일하게 잡아줘야 정 가운데로 표현 */
+    line-height: 50px;
+}
+#article .sns-txt .sns-icon li {
+    /* 넓이값과 높이값을 똑같이 잡아줘야 정사각형으로 표현됨(padding nono) */
+    width: 50px; height: 50px;
+    float: left;
+    background: #7c4a23;
+    /* padding: 10px 10px; */
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+
+/* footer */
+#main-footer {
+    clear: both;
+}
+#main-footer .footer-container {
+    height: 170px;
+   background: #333;
+   margin: 0 auto;
+}
+#main-footer .footer-container .footer-link {
+    max-width: 1200px;
+    /* min-width: 768px; */
+    margin: 0 auto;
+    text-align: center;
+}
+#main-footer .footer-container .footer-link li {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 13px;
+}
+#main-footer .footer-container .footer-link span {
+    color: #efefef;
+    padding: 0px 15px;
+}
+#main-footer .footer-container .info p {
+    color: #efefef;
+    text-align: center;
+    font-size: 13px;
+}
+#main-footer .footer-container .info p:first-child {
+    margin-top: 30px;
+}
+
+#main-footer .copy-container {
+    /* width: 100%; */
+    height: 100px;
+    background: #242424;
+}
+#main-footer .copy-container .footer-copy {
+    max-width: 1200px;
+    /* min-width: 768px; */
+    margin: 0 auto;
+}
+#main-footer .copy-container .footer-copy p {
+    color: #a2a2a2;
+    font-size: 11px;
+    text-align: center;
+    padding-top: 30px;
+}
+/* footer-indicator */
+.footer-indi .top-btn {
+    display: none;
+    position: fixed;
+    bottom: 100px; right: 100px; 
+    /* width: 40px; */
+    height: 40px;
+    line-height: 1.5em;
+    font-size: 25px;
+    border: none;
+    /* border: 1px solid #999; */
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15%;
+    transition: 0.5s;
+}
+.top-btn.show {
+    display: block;
+}
+

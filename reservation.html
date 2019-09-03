@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RESERVATION</title>
+    <!-- title icon -->
+    <link rel="shortcut icon" href="images/icon.png">
+    <!-- 외부 CSS -->
+    <link rel="stylesheet" href="css/reservation.css">
+    <!-- 구글 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- calender 플러그인 -->
+    <script src="air-datepicker/datepicker.min.js"></script>
+    <!-- 언어설정 -->
+    <script src="air-datepicker/i18n/datepicker.en.js"></script>
+    <link rel="stylesheet" href="air-datepicker/datepicker.min.css" />
+    <!-- vegas-slider 플러그인 -->
+    <script src="https://zeptojs.com/zepto.min.js"></script>
+    <link rel="stylesheet" href="vegas/vegas.min.css">
+    <script src="vegas/vegas.min.js"></script>
+    <!-- bx slider 플러그인 -->
+    <link rel="stylesheet" href="bx-slider/jquery.bxslider.min.css">
+    <script src="bx-slider/jquery.bxslider.min.js"></script>
+    <!-- main.js -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="inner">
+            <div class="container">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+                <nav id="main-menu">
+                    <ul class="depth1">
+                        <li><a href="#">ABOUT</a>
+                            <ul class="depth2">
+                                <li><a href="about.html">유성웨딩소개</a></li>
+                                <li><a href="location.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">WEDDING</a>
+                            <ul class="depth2">
+                                <li><a href="falacehall.html">펠리스홀</a></li>
+                                <li><a href="grandhall.html">그랜드홀</a></li>
+                                <li><a href="#">신부대기실</a></li>
+                                <li><a href="#">폐백실</a></li>
+                                <li><a href="#">편의시설</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">BANQUET</a>
+                            <ul class="depth2">
+                                <li><a href="#">연회장</a></li>
+                                <li><a href="#">메뉴소개</a></li>
+                                <li><a href="#">돌잔치</a></li>
+                                <li><a href="#">회갑/고희연</a></li>
+                                <li><a href="#">가족행사</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">COMMUNITY</a>
+                            <ul class="depth2">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">RESERVATION</a>
+                            <ul class="depth2">
+                                <li><a href="reservation.html">예약하기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div><!-- end container -->
+            <div class="title-txt">
+                <h1>RESERVATION</h1>
+                <p>1:1 예약 및 문의</p>
+            </div>
+        </div><!-- end inner -->
+    </header>
+
+    <section id="form">
+        <div class="left_form">
+            <h2><span class="col-change">STEP 01.</span> 웨딩홀 선택</h2>
+            <div class="hall">
+                <input type="radio" name="hall" id="hall"><span> 그랜드홀</span>
+                <input type="radio" name="hall" id="hall"> 펠리스홀
+            </div>
+            <!-- <div class="date-box">
+                <p><label for="visit-date">방문 일자</label></p>
+                <input type="date">
+            </div> -->
+
+            <h2><span class="col-change">STEP 02.</span> 희망 예식 날짜</h2>
+            <div class="date-box">
+                <input id="my-calendar" type="text" class="datepicker-here" data-language="ko" />
+            </div>
+            <h2><span class="col-change">STEP 03.</span> 예상 하객 수</h2>
+            <div class="select-box">
+                <select name="" id="" class="p_select">
+                    <option value="">예상 하객 수 선택</option>
+                    <option value="200">200명</option>
+                    <option value="300">300명</option>
+                    <option value="400">400명</option>
+                    <option value="500">500명</option>
+                    <option value="600">600명</option>
+                    <option value="user_num">직접 입력</option>
+                </select>
+            </div>
+            <h2><span class="col-change">STEP 04.</span> 정보 입력</h2>
+            <div class="user-info">
+                <p>예약자명<p>
+                        <label for="user_name">
+                            <input type="text" placeholder="이름" id="user_name" style="width: 100%;">
+                        </label>
+            </div>
+            <div class="user-info">
+                <p>연락처</p>
+                <select name="call" id="call" class="user-call">
+                    <option value="default">선택해주세요.</option>
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="016">016</option>
+                    <option value="017">017</option>
+                    <option value="019">019</option>
+                </select>
+                <input type="text" maxlength="4">
+                <input type="text" maxlength="4">
+            </div>
+        </div>
+
+
+        <div class="right_form">
+            <div class="detail-box">
+                <p>상세내용</p>
+                <textarea name="memo" id="memo" rows="20"></textarea>
+            </div>
+
+            <div class="rule">
+                <textarea name="memo" id="user_rule">
+[개인정보 처리 방침]
+회사는 유성 컨벤션 웨딩 상담예약에서 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+이용자가 제공한 모든 정보는 하기 목적에 필요한 용도 이외로는 사용되지 않으며 이용 목적이 변경될 시에는 사전 동의를 구할 것 입니다.
+1) 개인정보 수집 이용목적
+- 예약 상담 목적으로 다음의 개인정보를 수집하고자 합니다.
+2) 수집하는 개인정보 항목
+- 성명, 연락처
+3) 개인정보 보유 및 이용기간
+- 예약 상담신청을 통해 수집된 개인정보를 별도로 축적하지는 않으며, 내용은 담당자에게 발송된 이메일 형태로 발송 후 수집 목적 달성 시까지 보유후 파기합니다.   
+※위의 개인정보 수집·이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 서비스 이용에 제한될 수 있음을 알려드립니다.
+※수집된개인정보는서면, 전화, 이메일, 홈페이지등을통해열람, 정정, 삭제, 처리정지요구가가능합니다.
+                </textarea>
+            </div>
+            <input type="checkbox">개인정보처리방침에 동의합니다.
+        </div>
+
+        <div class="btn-click">
+            <a href="#" class="re-btn">제출하기</a>
+        </div>
+
+    </section>
+
+
+
+
+
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-link">
+                <ul>
+                    <li><a href="#">ABOUT YS CONVENTION</a><span>|</span></li>
+                    <li><a href="#">REAERVATION</a><span>|</span></li>
+                    <li><a href="#">LOCATION</a><span>|</span></li>
+                    <li><a href="#">EVENT</a><span>|</span></li>
+                    <li><a href="#">CSCENTER</a><span>|</span></li>
+                    <li><a href="#">BLOG</a></li>
+                </ul>
+            </div>
+            <div class="info">
+                <p>대표 : 선영복 사업자등록번호 : 314-86-16759</p>
+                <p>대표 : 김재성 사업자등록번호 : 314-86-38641</p>
+                <p>대표전화 : 042.825.7070 팩스 : 042.826.2178 대전광역시 유성구 온천북로 77(봉명동) <strong>(주)유성컨벤션웨딩</strong></p>
+            </div>
+        </div>
+        <div class="copy-container">
+            <div class="footer-copy">
+                <p>COPYRIGHT&copy; 2011 YS CONVENTION WEDDINGHALL. ALL RIGHTS RESERVED. <br>
+                    DESIGNED BY LINEART</p>
+            </div>
+            <div class="footer-indi">
+                <a href="#main-header" class="top-btn"><img src="images/footer-indi.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

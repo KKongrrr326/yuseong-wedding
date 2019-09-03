@@ -1,0 +1,155 @@
+@media (min-width:0px) and (max-width:768px) {
+
+    /* header */
+    #main-header {
+        max-width: 768px;
+    }
+    #main-header .logo{
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #main-menu {
+        display: none;
+    }
+    #main-menu.show {
+        display: block;
+        /* top: 100%; */
+    }
+    header #main-menu {
+        width:100%;
+        position: absolute;
+        top: 100px; right: 0;
+        /* border: 1px solid red; */
+    }
+    header #main-menu .depth1 > li {
+        width: 100%;
+        text-align: center;
+        background: rgba(163,107,41,0.8);
+    }
+    header #main-menu .depth1 > li:hover a {
+        color: #000;
+    }
+    header #main-menu .depth2 {
+        display: none;
+    }
+    header #main-menu .depth2.show {
+        display: block;
+    }
+    #main-header .menu {
+        display: block;
+        position: absolute;
+        top: 50%; right: 5%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: none;
+        outline: none;
+    }
+    #main-header .menu i {
+        color: #efefef;
+        font-size: 3em;
+    }
+    .indicator {
+        display: none;
+    }
+
+    /* about */
+    #about {
+        max-width: 768px;
+    }
+    #about .about-txt h2 {
+        padding-top: 10%;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+    #about .about-txt p {
+        font-size: 0.8em;
+        line-height: 1.5em;
+    }
+    #about .about-txt .wed-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+        color: #efefef;
+    }
+
+    /* contents */
+    #contents {
+        max-width: 768px;
+        /* min-width: 768px; */
+        /* margin: 0 auto; */
+        margin-top: 100px;
+        /* overflow: hidden; */
+        margin-bottom: 100px;
+        display: block;
+    
+    }
+    #contents .wedding,
+    #contents .gallery,
+    #contents .reservation {
+        width: 100%;
+        height: 300px;
+        /* border: 1px solid #000; */
+        margin-bottom: 50px;
+        /* flex: 1; */
+    }
+    #contents .wedding:hover .layout,
+    #contents .gallery:hover .layout,
+    #contents .reservation:hover .layout {
+        width: 100%;
+        height: 300px;
+        background-color:rgba(214, 176, 97, 0.6);
+    }
+    #contents .wedding,
+    #contents .gallery,
+    #contents .reservation {
+        background-size: cover;
+        background-position: center center;
+    }
+    #contents .wedding .contents-txt,
+    #contents .gallery .contents-txt,
+    #contents .reservation .contents-txt {
+        top: 20%;
+    }
+
+    /* artice */
+    #article .article-container {
+        max-width: 768px;
+        height: auto;
+        margin-bottom: 100px;
+        display: block;
+    }
+    #article .article-container .event {
+        /* width: 100%; */
+        height: 300px;
+        display: block;
+        margin-bottom: 50px;
+        margin-right: 0;
+    }
+    #article .article-container .sns {
+        /* width: 100%; */
+        height: 300px;
+        background: #d7cda7;
+        display: block; 
+        /* margin-right: 0;    */
+    }
+    #article .sns-txt .sns-icon {
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 35%;
+    }
+    
+    /* footer-indicator */
+    #main-footer {
+        clear: both;
+    }
+    .footer-indi .top-btn {
+        bottom: 280px;
+        right: 10px;
+    }
+    
+
+}
