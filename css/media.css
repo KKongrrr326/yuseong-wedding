@@ -1,12 +1,15 @@
 @media (min-width:0px) and (max-width:768px) {
-
+    
     /* header */
     #main-header {
         max-width: 768px;
     }
+    header .inner {
+        height: 80px;
+    }
     #main-header .logo{
-        width: 200px;
-        height: 100px;
+        width: 150px;
+        height: 50px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -21,7 +24,7 @@
     header #main-menu {
         width:100%;
         position: absolute;
-        top: 100px; right: 0;
+        top: 80px; right: 0;
         /* border: 1px solid red; */
     }
     header #main-menu .depth1 > li {
@@ -43,15 +46,15 @@
         position: absolute;
         top: 50%; right: 5%;
         transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border: none;
         background: none;
         outline: none;
     }
     #main-header .menu i {
         color: #efefef;
-        font-size: 3em;
+        font-size: 2em;
     }
     .indicator {
         display: none;
@@ -129,18 +132,15 @@
         margin-bottom: 50px;
         margin-right: 0;
     }
+    #article .article-container .event li a {
+        margin-bottom: 5px;
+    }
     #article .article-container .sns {
-        /* width: 100%; */
         height: 300px;
         background: #d7cda7;
         display: block; 
-        /* margin-right: 0;    */
     }
-    #article .sns-txt .sns-icon {
-        text-align: center;
-        vertical-align: middle;
-        margin-left: 35%;
-    }
+    
     
     /* footer-indicator */
     #main-footer {
